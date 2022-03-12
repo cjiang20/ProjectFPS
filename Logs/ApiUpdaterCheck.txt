@@ -1,0 +1,10 @@
+[api-updater (non-obsolete-error-filter)] 3/12/2022 1:59:13 PM : Starting /Applications/Unity/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 465.228ms
+moved types parse time: 152ms
+candidates parse time : 6ms
+C# parse time         : 466ms
+candidates check time : 114ms
+console write time    : 1ms
+
