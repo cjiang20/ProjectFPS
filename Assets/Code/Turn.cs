@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Turn : MonoBehaviour
 {
     public float speed = 300;
@@ -12,8 +13,13 @@ public class Turn : MonoBehaviour
     float YRotation;
     float ZRotation;
 
+    public bool grounded;
+    public Vector3 jump;
+    public float jumpF = 2.0F;
 
     public GameObject target;
+
+    Rigidbody rb;
 
     Vector3 stepVector;
 
@@ -28,6 +34,13 @@ public class Turn : MonoBehaviour
         YRotation = 0;
         ZRotation = 0;
 
+        rb = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, 2.0f, 0.0f);
+
+    }
+
+    void onCollisionStay() {
+        grounded = true;
     }
 
     // Update is called once per frame
@@ -46,14 +59,24 @@ public class Turn : MonoBehaviour
         }
 
         // Translates when using left click, forwards
-        if(Input.GetKey("w")) {
+        if(Input.GetKey("q")) {
             transform.Translate(Vector3.forward * 5 * Time.deltaTime, Space.Self);
         }
 
         // Translates when using right click, backwards
-        else if(Input.GetKey("s")) {
+        else if(Input.GetKey("e")) {
             transform.Translate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
         }
+
+        // if(Input.GetKeyDown(KeyCode.Space) && grounded){
+
+        //     rb.AddForce(jump * jumpF, ForceMode.Impulse);
+        //     grounded = false;
+        // }
+
+        // float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
+        // float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime;
+        // transform.Translate(sideway, transform.localPosition.y, forward);
 
         // This code does the rotations proper, the target.transofrm.eulerAngles.y is the Global Axis's euler angles.
         // This allows use to use the "Global Axis" in order to rotate properly.  
