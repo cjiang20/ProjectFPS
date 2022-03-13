@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Unity Editor version:    2020.3.26f1 (7298b473bc1a)
 Branch:                  2020.3/staging
 Build type:              Release
@@ -14,6 +15,8 @@ Pro License: NO
 COMMAND LINE ARGUMENTS:
 /Applications/Unity/Unity.app/Contents/MacOS/Unity
 =======
+=======
+>>>>>>> Stashed changes
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.26f1 (7298b473bc1a) revision 7510196'; Using compiler version '192528614'; Build Type 'Release'
 OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 32681 MB
@@ -21,6 +24,9 @@ BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, I
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity 2020.3.26f1\Editor\Unity.exe
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 -adb2
 -batchMode
@@ -28,6 +34,7 @@ C:\Program Files\Unity 2020.3.26f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 /Users/cjiang/Desktop/Game design/FPS/My project
 -logFile
@@ -66,6 +73,8 @@ Domain Reload Profiling:
 	ReloadAssembly (1365ms)
 		BeginReloadAssembly (81ms)
 =======
+=======
+>>>>>>> Stashed changes
 C:/Users/Matthew Yi/Documents/GitHub/ProjectFPS
 -logFile
 Logs/AssetImportWorker0.log
@@ -103,11 +112,15 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (379ms)
 		BeginReloadAssembly (38ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 			CreateAndSetChildDomain (3ms)
 		EndReloadAssembly (1139ms)
@@ -127,6 +140,8 @@ Domain Reload Profiling:
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (1ms)
 =======
+=======
+>>>>>>> Stashed changes
 			CreateAndSetChildDomain (1ms)
 		EndReloadAssembly (291ms)
 			LoadAssemblies (37ms)
@@ -144,11 +159,15 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadMethodAttributes (20ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.001849 seconds.
 Begin MonoManager ReloadAssembly
@@ -211,6 +230,8 @@ Total: 2.476459 ms (FindLiveObjects: 0.079083 ms CreateObjectMapping: 0.030875 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
 =======
+=======
+>>>>>>> Stashed changes
 Registered in 0.003070 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -259,6 +280,9 @@ Total: 2.249400 ms (FindLiveObjects: 0.119400 ms CreateObjectMapping: 0.033500 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -266,7 +290,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -274,6 +301,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   path: Assets/Code
   artifactKey: Guid(d24d729f6e41c46f89075adf1c3184d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -296,6 +324,8 @@ Received Import Request.
 Start importing Assets/Code/Gun.cs using Guid(3550024cc61bd4f46a922bd3cd7a61a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfe465c8e67d6b81218afb408549feec') in 0.013780 seconds 
   Import took 0.031158 seconds .
 =======
+=======
+>>>>>>> Stashed changes
   path: Assets/Code/Turn.cs
   artifactKey: Guid(09d407372382c1f4db503d9ac896a652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Code/Turn.cs using Guid(09d407372382c1f4db503d9ac896a652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25af0c334b4d6f3e2c6160dda90ec1b0') in 0.033960 seconds 
@@ -428,11 +458,15 @@ Received Import Request.
   artifactKey: Guid(09d407372382c1f4db503d9ac896a652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Code/Turn.cs using Guid(09d407372382c1f4db503d9ac896a652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18ff8abb0f54de6136f01c9f0a5a9bc0') in 0.007264 seconds 
   Import took 0.009417 seconds .
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.002672 seconds.
 Begin MonoManager ReloadAssembly
@@ -479,6 +513,8 @@ Total: 3.078125 ms (FindLiveObjects: 0.073750 ms CreateObjectMapping: 0.028041 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
 =======
+=======
+>>>>>>> Stashed changes
 Registered in 0.133125 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -580,6 +616,9 @@ Total: 2.250000 ms (FindLiveObjects: 0.149700 ms CreateObjectMapping: 0.045200 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -587,7 +626,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -596,6 +638,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.004131 seconds.
 Begin MonoManager ReloadAssembly
@@ -642,6 +685,8 @@ Total: 2.176583 ms (FindLiveObjects: 0.130167 ms CreateObjectMapping: 0.032625 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
 =======
+=======
+>>>>>>> Stashed changes
 Registered in 0.003079 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -743,6 +788,9 @@ Total: 2.151900 ms (FindLiveObjects: 0.138400 ms CreateObjectMapping: 0.036700 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -750,7 +798,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -759,6 +810,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.001906 seconds.
 Begin MonoManager ReloadAssembly
@@ -805,6 +857,8 @@ Total: 2.008250 ms (FindLiveObjects: 0.069458 ms CreateObjectMapping: 0.028208 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
 =======
+=======
+>>>>>>> Stashed changes
 Registered in 0.088757 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -906,6 +960,9 @@ Total: 2.258900 ms (FindLiveObjects: 0.143400 ms CreateObjectMapping: 0.033700 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -913,7 +970,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -922,6 +982,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.001999 seconds.
 Begin MonoManager ReloadAssembly
@@ -968,6 +1029,8 @@ Total: 2.042625 ms (FindLiveObjects: 0.079791 ms CreateObjectMapping: 0.052667 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
 =======
+=======
+>>>>>>> Stashed changes
 Registered in 0.002867 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -1013,6 +1076,9 @@ Total: 2.140000 ms (FindLiveObjects: 0.137600 ms CreateObjectMapping: 0.029400 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1020,7 +1086,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -1029,6 +1098,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Registered in 0.002596 seconds.
 Begin MonoManager ReloadAssembly
@@ -1075,6 +1145,8 @@ Total: 1.896250 ms (FindLiveObjects: 0.072958 ms CreateObjectMapping: 0.029250 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
 =======
+=======
+>>>>>>> Stashed changes
 Registered in 0.002801 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -1120,6 +1192,9 @@ Total: 2.408000 ms (FindLiveObjects: 0.131000 ms CreateObjectMapping: 0.047100 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -1127,13 +1202,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 1680.772463 seconds.
@@ -1190,6 +1269,8 @@ Total: 1.893542 ms (FindLiveObjects: 0.071292 ms CreateObjectMapping: 0.028584 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
 =======
+=======
+>>>>>>> Stashed changes
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.002878 seconds.
@@ -2245,6 +2326,9 @@ Total: 2.237100 ms (FindLiveObjects: 0.129200 ms CreateObjectMapping: 0.036600 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -2252,13 +2336,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 =======
+=======
+>>>>>>> Stashed changes
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
