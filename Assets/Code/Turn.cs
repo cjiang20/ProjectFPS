@@ -6,8 +6,6 @@ using UnityEngine;
 public class Turn : MonoBehaviour
 {
     public float speed = 300;
-    public float minRotation = -45;
-    public float maxRotation = 45;
 
     float XRotation;
     float YRotation;
@@ -74,29 +72,18 @@ public class Turn : MonoBehaviour
         //     grounded = false;
         // }
 
-        // float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
-        // float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime;
-        // transform.Translate(sideway, transform.localPosition.y, forward);
-
-        // This code does the rotations proper, the target.transofrm.eulerAngles.y is the Global Axis's euler angles.
-        // This allows use to use the "Global Axis" in order to rotate properly.  
-        XRotation = transform.eulerAngles.x + (-1 * speed * Time.deltaTime * Input.GetAxis("Mouse Y"));
+        XRotation = 0;
         YRotation = target.transform.eulerAngles.y + (speed * Time.deltaTime * Input.GetAxis("Mouse X"));
         ZRotation = 0;
-
-        // Lock rotation between 0-45, and 315-360
-        if(XRotation > 45f && XRotation <= 180f) {
-            XRotation = 45f;
-        }
-        if(XRotation > 180f && XRotation < 315f) {
-            XRotation = 315f;
-        }
 
         // Quaternion values, as suggested by the assignment page.
         Quaternion rots = Quaternion.Euler(XRotation, YRotation, ZRotation);
 
         transform.rotation = rots;
 
+        float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 20;
+        float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 20;
 
+        transform.Translate(sideway, 0, forward);
     }
 }

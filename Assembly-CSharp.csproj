@@ -47,8 +47,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\Gun.cs" />
      <Compile Include="Assets\Code\Follow.cs" />
      <Compile Include="Assets\Code\makeCylinder.cs" />
+     <Compile Include="Assets\Code\Target.cs" />
      <Compile Include="Assets\Code\Turn.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity 2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
