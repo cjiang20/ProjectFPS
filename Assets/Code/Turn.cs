@@ -57,12 +57,12 @@ public class Turn : MonoBehaviour
         }
 
         // Translates when using left click, forwards
-        if(Input.GetKey("q")) {
+        if(Input.GetKey("z")) {
             transform.Translate(Vector3.forward * 5 * Time.deltaTime, Space.Self);
         }
 
         // Translates when using right click, backwards
-        else if(Input.GetKey("e")) {
+        else if(Input.GetKey("c")) {
             transform.Translate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
         }
 
@@ -72,6 +72,7 @@ public class Turn : MonoBehaviour
         //     grounded = false;
         // }
 
+        
         XRotation = 0;
         YRotation = target.transform.eulerAngles.y + (speed * Time.deltaTime * Input.GetAxis("Mouse X"));
         ZRotation = 0;
@@ -79,11 +80,21 @@ public class Turn : MonoBehaviour
         // Quaternion values, as suggested by the assignment page.
         Quaternion rots = Quaternion.Euler(XRotation, YRotation, ZRotation);
 
-        transform.rotation = rots;
+        if(Input.GetKey(KeyCode.LeftShift)) {
+            transform.rotation = rots;
 
-        float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 20;
-        float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 20;
+            float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 60;
+            float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 60;
 
-        transform.Translate(sideway, 0, forward);
+            transform.Translate(sideway, 0, forward);
+        }
+        else {
+            transform.rotation = rots;
+
+            float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 20;
+            float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 20;
+
+            transform.Translate(sideway, 0, forward);
+        }
     }
 }

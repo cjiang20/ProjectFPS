@@ -47,6 +47,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\CameraControls.cs" />
      <Compile Include="Assets\Code\Gun.cs" />
      <Compile Include="Assets\Code\Follow.cs" />
      <Compile Include="Assets\Code\makeCylinder.cs" />
