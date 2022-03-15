@@ -32,7 +32,8 @@ public class Follow : MonoBehaviour
     void Update()
     {
 
-        //This code follows the Me object, keeping the same position, but keeping the y axis parrallel to the ground (i.e. the global y axis)
+        //This code follows the Me object, keeping the same position, but keeping 
+        //the y axis parrallel to the ground (i.e. the global y axis)
         //This allows the Me object to rotate on the "global axis."
         transform.position = target.transform.position;
 
