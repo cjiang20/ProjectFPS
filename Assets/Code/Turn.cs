@@ -13,13 +13,15 @@ public class Turn : MonoBehaviour
 
     public bool grounded;
     public Vector3 jump;
-    public float jumpF = 2.0F;
+    public float jumpF = 3f;
 
     public GameObject target;
 
     Rigidbody rb;
 
     Vector3 stepVector;
+    [SerializeField] private Transform groundCheckTransform = null;
+    [SerializeField] private LayerMask playerMask;
 
     // Start is called before the first frame update
     void Start()
@@ -66,11 +68,12 @@ public class Turn : MonoBehaviour
             transform.Translate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
         }
 
-        // if(Input.GetKeyDown(KeyCode.Space) && grounded){
+        if(Input.GetKeyDown(KeyCode.Space)){
 
-        //     rb.AddForce(jump * jumpF, ForceMode.Impulse);
-        //     grounded = false;
-        // }
+            //rb.AddForce(jump * jumpF, ForceMode.Impulse);
+            Debug.Log("Space was Pressed");
+            grounded = false;
+        }
 
         XRotation = 0;
         YRotation = target.transform.eulerAngles.y + (speed * Time.deltaTime * Input.GetAxis("Mouse X"));
@@ -85,5 +88,17 @@ public class Turn : MonoBehaviour
         float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 20;
 
         transform.Translate(sideway, 0, forward);
+    }
+    //Fixed update called once every physics step 
+    //approximately twice per frame on 25 fps
+    private void FixedUpdate() {
+        if (Physics.OverlapSphere(groundCheckTransform.position, 0.1f, playerMask).Length == 0) {
+            return;
+        }
+
+        if (!grounded) {
+            rb.AddForce(Vector3.up * jumpF, ForceMode.VelocityChange);
+            grounded = true;
+        }
     }
 }
