@@ -40,12 +40,15 @@ public class Grapple : MonoBehaviour
 
         // float speedTowardsGrapplePoint = Mathf.Round(Vector3.Dot(rb.velocity, directionToGrapple) * 100) / 100;
 
-        // if (speedTowardsGrapplePoint < 0) {
-        //     if (currentDistanceToGrapple > length) {
-        //         rb.velocity -= speedTowardsGrapplePoint * directionToGrapple;
-        //         rb.position = tetherPoint - directionToGrapple * length;
-        //     }
-        // }
+        if (Vector3.Distance(transform.position, tetherPoint) > 2.0f)
+            {
+                Vector3 normalized = (tetherPoint - transform.position).normalized;
+                GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(GetComponent<Rigidbody>().velocity, normalized * 10f, 1.0f);
+            }
+        else
+            {
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
+            }
     }
 
     void GrappleHook() {
