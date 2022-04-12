@@ -39,6 +39,7 @@ public class Grapple : MonoBehaviour
         // float currentDistanceToGrapple = Vector3.Distance(tetherPoint, transform.position);
 
         // float speedTowardsGrapplePoint = Mathf.Round(Vector3.Dot(rb.velocity, directionToGrapple) * 100) / 100;
+        // Test change
 
         if (Vector3.Distance(transform.position, tetherPoint) > 2.0f)
             {
