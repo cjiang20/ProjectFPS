@@ -198,7 +198,7 @@
 /reference:"/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll"
 /reference:"/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll"
 /reference:"/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
-/reference:"/Users/Finn/Documents/GitHub/ProjectFPS/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
+/reference:"/Users/cjiang/Desktop/Game design/FPS/My project/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
 /reference:"Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll"
 /reference:"Library/ScriptAssemblies/Unity.Rider.Editor.dll"
 /reference:"Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
