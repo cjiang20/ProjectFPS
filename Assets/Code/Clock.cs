@@ -7,19 +7,16 @@ using System;
 public class Clock : MonoBehaviour
 {  
     public Text textClock;
-    private DateTime startTime;
+    private float time;
+    private DateTime oldTime;
     //Testing
     void Start (){ 
-
+        time = 0;
    }
     void Update (){
-        DateTime time = DateTime.Now;
-        string minute = LeadingZero( time.Minute );
-        string second = LeadingZero( time.Second );
-        textClock.text = minute + ":" + second;
-   }
-   string LeadingZero (int n){
-        return n.ToString().PadLeft(2, '0');
+        time = time + Time.deltaTime;
+        TimeSpan currTime = TimeSpan.FromSeconds(time);
+        textClock.text = currTime.ToString(@"ss\:ff");
    }
 }
 
