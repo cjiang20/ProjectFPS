@@ -44,7 +44,7 @@ public class Grapple : MonoBehaviour
         if (Vector3.Distance(transform.position, tetherPoint) > 2.0f)
             {
                 Vector3 normalized = (tetherPoint - transform.position).normalized;
-                GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(GetComponent<Rigidbody>().velocity, normalized * 10f, 1.0f);
+                GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(GetComponent<Rigidbody>().velocity, normalized * 20f, 6.0f);
             }
         else
             {

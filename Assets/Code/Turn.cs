@@ -13,7 +13,7 @@ public class Turn : MonoBehaviour
 
     public bool grounded;
     public Vector3 jump;
-    public float jumpF = 3f;
+    public float jumpF = 10.0f;
 
     public GameObject target;
 
@@ -35,7 +35,7 @@ public class Turn : MonoBehaviour
         ZRotation = 0;
 
         rb = GetComponent<Rigidbody>();
-        jump = new Vector3(0.0f, 2.0f, 0.0f);
+        jump = new Vector3(0.0f, 20.0f, 0.0f);
 
     }
 
@@ -57,17 +57,7 @@ public class Turn : MonoBehaviour
             Application.Quit();
 #endif
         }
-
-        // Translates when using left click, forwards
-        if(Input.GetKey("z")) {
-            transform.Translate(Vector3.forward * 5 * Time.deltaTime, Space.Self);
-        }
-
-        // Translates when using right click, backwards
-        else if(Input.GetKey("c")) {
-            transform.Translate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
-        }
-
+        
         if(Input.GetKeyDown(KeyCode.Space)){
 
             //rb.AddForce(jump * jumpF, ForceMode.Impulse);
