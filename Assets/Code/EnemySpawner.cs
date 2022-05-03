@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject theEnemy;
     int xPos, zPos, i = 0;
-    public int enemyCount = 3;
+    public int negxPos = -22, posxPos = 10, negzPos = -14, poszPos = 21, enemyCount = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +23,13 @@ public class EnemySpawner : MonoBehaviour
     {
         while (i < enemyCount)
         {
-            xPos = Random.Range(-21, 14);
-            zPos = Random.Range(-14, 21);
+            if (i == 3)
+            {
+                negzPos = 28;
+                poszPos = 35;
+            }
+            xPos = Random.Range(negxPos, posxPos);
+            zPos = Random.Range(negzPos, poszPos);
             Instantiate(theEnemy, new Vector3(xPos,0,zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
             i++;
