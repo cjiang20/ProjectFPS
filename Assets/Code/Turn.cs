@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Turn : MonoBehaviour
@@ -99,6 +100,10 @@ public class Turn : MonoBehaviour
 
             transform.Translate(sideway, 0, forward);
         }
+        if(transform.position.y < -10)
+        {
+            ReloadLevel();
+        }
     }
     //Fixed update called once every physics step 
     //approximately twice per frame on 25 fps
@@ -111,5 +116,9 @@ public class Turn : MonoBehaviour
             rb.AddForce(Vector3.up * jumpF, ForceMode.VelocityChange);
             grounded = true;
         }
+    }
+    void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
