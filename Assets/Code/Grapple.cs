@@ -9,12 +9,17 @@ public class Grapple : MonoBehaviour
     private float length;
     private Vector3 tetherPoint;
     private Camera viewPoint;
+    private bool jump;
+    private bool jumping;
+    private float time = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         viewPoint = Camera.main;
         rb = GetComponent<Rigidbody>();
+        jump = false;
+        jumping = false;
     }
 
     // Update is called once per frame
@@ -34,6 +39,23 @@ public class Grapple : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        if(jump) {
+            GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(GetComponent<Rigidbody>().velocity, ((tetherPoint - transform.position).normalized) * 20f, 6.0f);
+            jumping = true;
+        }
+        if(jumping) {
+            time = time + Time.fixedDeltaTime;
+            if(time > 1.0f) {
+                jump = false;
+                jumping = false;
+                time = 0;
+            }
+        }
+        
+    }
+
     void grapplePhysics() {
         // Vector3 directionToGrapple = Vector3.Normalize(tetherPoint - transform.position);
         // float currentDistanceToGrapple = Vector3.Distance(tetherPoint, transform.position);
@@ -41,10 +63,10 @@ public class Grapple : MonoBehaviour
         // float speedTowardsGrapplePoint = Mathf.Round(Vector3.Dot(rb.velocity, directionToGrapple) * 100) / 100;
         // Test change
 
-        if (Vector3.Distance(transform.position, tetherPoint) > 2.0f)
+        if (Vector3.Distance(transform.position, tetherPoint) > 2.0f)  //Need to add a if grapple is not seeable, break
             {
-                Vector3 normalized = (tetherPoint - transform.position).normalized;
-                GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(GetComponent<Rigidbody>().velocity, normalized * 20f, 6.0f);
+                jump = true;
+                //Add a velocity towards what you are looking at when flying
             }
         else
             {
