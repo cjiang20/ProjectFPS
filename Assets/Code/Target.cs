@@ -6,6 +6,9 @@ public class Target : MonoBehaviour
     [SerializeField] private AudioClip deathNoise;
     public AudioSource _audioSource;
     public Transform leftWayPoint, rightWayPoint;
+    [SerializeField] private HealthBar healthBar;
+    private float MaxHealth;
+    private GameObject hp;
     bool movingRight = true;
     Rigidbody rb;
 
@@ -15,6 +18,7 @@ public class Target : MonoBehaviour
         rightWayPoint = GameObject.Find("RightWayPoint").GetComponent<Transform>();
 
         rb = GetComponent<Rigidbody>();
+        MaxHealth = health;
     }
     // Update is called once per frame
     void Update()
@@ -50,6 +54,7 @@ public class Target : MonoBehaviour
     }
     public void TakeDamage(float damage) {
         health = health - damage;
+        (hp.GetComponent(typeof(HealthBar)) as HealthBar).SetProgress(health/MaxHealth);
         if (health <= 0f) {
             Die();
         }
@@ -58,5 +63,14 @@ public class Target : MonoBehaviour
     void Die(){
         _audioSource.PlayOneShot(deathNoise);
         Destroy(gameObject);
+        Destroy(hp);
+    }
+    public void setupHP(Canvas canvas, Camera camera){
+        healthBar.SetTarget(transform);
+        hp = Instantiate(healthBar.gameObject, transform.position, Quaternion.identity) as GameObject;
+        hp.transform.SetParent(canvas.transform);
+        if (hp.TryGetComponent<FaceCamera>(out FaceCamera faceCamera)) {
+            faceCamera.Camera = camera;
+        }
     }
 }

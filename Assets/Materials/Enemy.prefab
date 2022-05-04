@@ -126,13 +126,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a7a1f85e5a540a19732a8de6010f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   moveSpeed: 2
   direction: 0
   deathNoise: {fileID: 8300000, guid: c6bbfc43c474b4f9dba88b387664261a, type: 3}
   _audioSource: {fileID: -2101440581393421493}
   leftWayPoint: {fileID: 0}
   rightWayPoint: {fileID: 0}
+  healthBar: {fileID: -6611433626422804754, guid: aa3e71a28dfae4d4ba09ef4cecd5ff09, type: 3}
 --- !u!82 &-2101440581393421493
 AudioSource:
   m_ObjectHideFlags: 0
