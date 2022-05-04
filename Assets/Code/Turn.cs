@@ -87,16 +87,16 @@ public class Turn : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift)) {
             transform.rotation = rots;
 
-            float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 60;
-            float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 60;
+            float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 30;
+            float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 30;
 
             transform.Translate(sideway, 0, forward);
         }
         else {
             transform.rotation = rots;
 
-            float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 20;
-            float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 20;
+            float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 10;
+            float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 10;
 
             transform.Translate(sideway, 0, forward);
         }
