@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1171,12 +1171,12 @@ MonoBehaviour:
   speed: 300
   grounded: 0
   jump: {x: 0, y: 0, z: 0}
-  jumpF: 2
+  jumpF: 3
   target: {fileID: 0}
-  groundCheckTransform: {fileID: 38676909}
+  groundCheckTransform: {fileID: 0}
   playerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 0
 --- !u!54 &2139764670
 Rigidbody:
   m_ObjectHideFlags: 0
