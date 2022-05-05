@@ -6,17 +6,16 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 public class Turn : MonoBehaviour
 {
-    public float speed = 300;
+    public float speed = 300, jumpF = 3f;
 
-    float XRotation;
-    float YRotation;
-    float ZRotation;
+    float XRotation, YRotation, ZRotation;
 
     public bool grounded;
     public Vector3 jump;
-    public float jumpF = 3f;
 
     public GameObject target;
+    public static Turn Reference;
+    public int KilledEnemies;
 
     Rigidbody rb;
 
@@ -104,6 +103,10 @@ public class Turn : MonoBehaviour
         {
             ReloadLevel();
         }
+        if(KilledEnemies == 4)
+        {
+            NextLevel();
+        }
     }
     //Fixed update called once every physics step 
     //approximately twice per frame on 25 fps
@@ -117,8 +120,25 @@ public class Turn : MonoBehaviour
             grounded = true;
         }
     }
+    void Awake()
+    {
+        Reference = this;
+    }
     void ReloadLevel()
     {
+        KilledEnemies = 0;
+        Debug.Log(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    void NextLevel()
+    {
+        if(!SceneManager.GetActiveScene().name.Equals("Level 2"))
+        {
+            Debug.Log("Next Level");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        } else {
+            Debug.Log("Game Over You Win");
+            KilledEnemies--;
+        }
     }
 }
