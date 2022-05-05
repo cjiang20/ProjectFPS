@@ -14,8 +14,6 @@ public class Target : MonoBehaviour
 
     void Start()
     {
-        leftWayPoint = GameObject.Find("LeftWayPoint").GetComponent<Transform>();
-        rightWayPoint = GameObject.Find("RightWayPoint").GetComponent<Transform>();
 
         rb = GetComponent<Rigidbody>();
         MaxHealth = health;
