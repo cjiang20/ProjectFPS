@@ -18,5 +18,8 @@ public class Clock : MonoBehaviour
         TimeSpan currTime = TimeSpan.FromSeconds(time);
         textClock.text = currTime.ToString(@"ss\:ff");
    }
+   public float tm() {
+        return time;
+   }
 }
 
