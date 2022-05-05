@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Turn : MonoBehaviour
 {
+    private PlayerInput playerInput;
+
+    private InputAction jumpAction;
+    private InputAction grappleAction;
+
     public float speed = 300, jumpF = 3f;
 
     float XRotation, YRotation, ZRotation;
@@ -22,7 +28,13 @@ public class Turn : MonoBehaviour
     Vector3 stepVector;
     [SerializeField] private Transform groundCheckTransform = null;
     [SerializeField] private LayerMask playerMask;
-
+    private void Awake()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        jumpAction = playerInput.actions["Jump"];
+        grappleAction = playerInput.actions["Grapple"];
+        Reference = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -119,10 +131,6 @@ public class Turn : MonoBehaviour
             rb.AddForce(Vector3.up * jumpF, ForceMode.VelocityChange);
             grounded = true;
         }
-    }
-    void Awake()
-    {
-        Reference = this;
     }
     void ReloadLevel()
     {
