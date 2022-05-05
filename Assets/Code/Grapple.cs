@@ -9,7 +9,8 @@ public class Grapple : MonoBehaviour
     private float length;
     private Vector3 tetherPoint;
     private Camera viewPoint;
-
+    private LineRenderer line;
+    public Material lineMaterial;
     private bool oneTime;
     private Vector3 grapJump = new Vector3(0.0f, 5.0f, 0.0f);
 
@@ -48,7 +49,8 @@ public class Grapple : MonoBehaviour
         }
         if(attached == true) {
             // StartCoroutine(stopGrav());
-            if (Vector3.Distance(transform.position, tetherPoint) > 1.0f)
+            line.SetPosition(0,transform.position);
+            if (Vector3.Distance(transform.position, tetherPoint) > 2.0f)
             {
                 Vector3 normalized = (tetherPoint - transform.position).normalized;
                 GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(GetComponent<Rigidbody>().velocity, normalized * 10f, 1.0f);
@@ -73,7 +75,12 @@ public class Grapple : MonoBehaviour
             tetherPoint = hit.point;
             attached = true;
             length = Vector3.Distance(tetherPoint, transform.position);
-
+            line = gameObject.AddComponent<LineRenderer>();
+            line.material = lineMaterial;
+            line.SetPosition(0, transform.position);
+            line.startWidth = .05f;
+            line.endWidth = .05f;
+            line.SetPosition(1,tetherPoint);
             print("WE GOTTEM");
             print(tetherPoint);
         }
@@ -81,5 +88,6 @@ public class Grapple : MonoBehaviour
     
     void EndGrapple() {
         attached = false;
+        GameObject.Destroy(line);
     }
 }
