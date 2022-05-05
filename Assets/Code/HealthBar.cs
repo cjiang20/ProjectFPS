@@ -20,7 +20,10 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Target.position + Offset;
+        if(Target != null)
+        {
+            transform.position = Target.position + Offset;
+        }
     }
     public void SetTarget(Transform target) {
         Target = target;
