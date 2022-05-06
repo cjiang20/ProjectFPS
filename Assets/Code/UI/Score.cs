@@ -15,6 +15,7 @@ public class Score : MonoBehaviour
         }
         if (PlayerPrefs.HasKey(sceneName)) {
             if (PlayerPrefs.GetInt(sceneName) < score) {
+                Debug.Log(sceneName);
                 PlayerPrefs.SetInt(sceneName, score);
                 return (1,score);
             }
