@@ -7227,7 +7227,6 @@ MonoBehaviour:
   jumpF: 2
   grounded: 0
   jump: {x: 0, y: 0, z: 0}
-  KilledEnemies: 0
   clock: {fileID: 1633119308}
   gun: {fileID: 838901978}
   score: {fileID: 838901985}
@@ -8438,7 +8437,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b65be68f6aea143d6beafb076a3d29d8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.53
+  m_Volume: 0.29
   m_Pitch: 1
   Loop: 0
   Mute: 0

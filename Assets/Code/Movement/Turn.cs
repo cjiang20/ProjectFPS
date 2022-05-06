@@ -113,13 +113,13 @@ public class Turn : MonoBehaviour
             float accuracy = gun.accuracy();
             (int hs,int score) s = score.getScore(time, accuracy, damage);
             if (s.hs == 1) {
-                Debug.Log("new Highscore");
-                Debug.Log(s.score);
+                PlayerPrefs.SetInt("highscoreBool", 1);
             }
             else {
-                Debug.Log(s.score);
+                PlayerPrefs.SetInt("highscoreBool", 0);
             }
-            NextLevel();
+            PlayerPrefs.SetInt("currScore", s.score);
+            ScoreScreen();
         }
     }
     //Fixed update called once every physics step 
@@ -136,7 +136,6 @@ public class Turn : MonoBehaviour
     }
     public void setTotalEnemies(int total) {
         totalEnemies = total;
-        Debug.Log(totalEnemies);
     }
     public void Kill(){
         KilledEnemies += 1;
@@ -152,15 +151,10 @@ public class Turn : MonoBehaviour
         KilledEnemies = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    void NextLevel()
+    void ScoreScreen()
     {
-        if(SceneManager.GetActiveScene().buildIndex < (SceneManager.sceneCountInBuildSettings - 1))
-        {
-            Debug.Log("Next Level");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        } else {
-            Debug.Log("Game Over You Win");
-            KilledEnemies--;
-        }
+        PlayerPrefs.SetString("currScene", SceneManager.GetActiveScene().name);
+        PlayerPrefs.SetInt("currSceneInt", SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Score");
     }
 }
