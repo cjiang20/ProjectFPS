@@ -9,8 +9,10 @@ public class Turn : MonoBehaviour
 {
     private PlayerInput playerInput;
 
-    private InputAction jumpAction;
-    private InputAction grappleAction;
+    private InputAction move;
+    private InputAction grapple;
+    public GameControls playerControls;
+    Vector2 moveDirection = Vector2.zero;
 
     public float speed = 300, jumpF = 3f;
 
@@ -31,8 +33,6 @@ public class Turn : MonoBehaviour
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        jumpAction = playerInput.actions["Jump"];
-        grappleAction = playerInput.actions["Grapple"];
         Reference = this;
     }
     // Start is called before the first frame update
@@ -61,13 +61,13 @@ public class Turn : MonoBehaviour
         // Quits game when Escape is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-#if UNITY_EDITOR
-            // Application.Quit() does not work in the editor so
-            // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
-            UnityEditor.EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
+// #if UNITY_EDITOR
+//             // Application.Quit() does not work in the editor so
+//             // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+//             UnityEditor.EditorApplication.isPlaying = false;
+// #else
+//             Application.Quit();
+// #endif
         }
 
         // Translates when using left click, forwards
@@ -80,7 +80,7 @@ public class Turn : MonoBehaviour
             transform.Translate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(playerInput.actions["Jump"].triggered){
 
             //rb.AddForce(jump * jumpF, ForceMode.Impulse);
             Debug.Log("Space was Pressed");
@@ -94,20 +94,20 @@ public class Turn : MonoBehaviour
 
         // Quaternion values, as suggested by the assignment page.
         Quaternion rots = Quaternion.Euler(XRotation, YRotation, ZRotation);
-
+        moveDirection = playerInput.actions["Move"].ReadValue<Vector2>();
         if(Input.GetKey(KeyCode.LeftShift)) {
             transform.rotation = rots;
 
-            float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 30;
-            float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 30;
+            float sideway = moveDirection.x * Time.deltaTime * 30;
+            float forward = moveDirection.y * Time.deltaTime * 30;
 
             transform.Translate(sideway, 0, forward);
         }
         else {
             transform.rotation = rots;
 
-            float sideway = Input.GetAxisRaw("Horizontal") * Time.deltaTime * 10;
-            float forward = Input.GetAxisRaw("Vertical") * Time.deltaTime * 10;
+            float sideway = moveDirection.x * Time.deltaTime * 10;
+            float forward = moveDirection.y * Time.deltaTime * 10;
 
             transform.Translate(sideway, 0, forward);
         }
