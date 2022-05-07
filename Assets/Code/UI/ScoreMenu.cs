@@ -27,6 +27,9 @@ public class ScoreMenu : MonoBehaviour
    public void Continue() {
      SceneManager.LoadScene(PlayerPrefs.GetInt("currSceneInt") + 1);
    }
+   public void levelSelect(){
+        SceneManager.LoadScene("LevelSelect");
+    }
     public void quitGame(){
         Application.Quit();
     }
