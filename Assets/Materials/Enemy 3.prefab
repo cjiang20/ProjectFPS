@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2323017019737675785}
   - component: {fileID: -2101440581393421493}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a7a1f85e5a540a19732a8de6010f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
-  moveSpeed: 2
+  health: 30
+  moveSpeed: 6
   direction: 0
   deathNoise: {fileID: 8300000, guid: c6bbfc43c474b4f9dba88b387664261a, type: 3}
   _audioSource: {fileID: -2101440581393421493}
