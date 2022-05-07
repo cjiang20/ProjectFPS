@@ -14,8 +14,6 @@ public class Target : MonoBehaviour
 
     void Start()
     {
-        leftWayPoint = GameObject.Find("LeftWayPoint").GetComponent<Transform>();
-        rightWayPoint = GameObject.Find("RightWayPoint").GetComponent<Transform>();
 
         rb = GetComponent<Rigidbody>();
         MaxHealth = health;
@@ -39,8 +37,7 @@ public class Target : MonoBehaviour
         }
         if(transform.position.y < -10)
         {
-            Turn.Reference.KilledEnemies += 1;
-            Debug.Log("NumEnemiesKilled: " + Turn.Reference.KilledEnemies);
+            Turn.Reference.Kill();
             Destroy(gameObject);
         }
     }
@@ -64,8 +61,7 @@ public class Target : MonoBehaviour
 
     void Die(){
         _audioSource.PlayOneShot(deathNoise);
-        Turn.Reference.KilledEnemies += 1;
-        Debug.Log("NumEnemiesKilled: " + Turn.Reference.KilledEnemies);
+        Turn.Reference.Kill();
         Destroy(gameObject);
         Destroy(hp);
     }

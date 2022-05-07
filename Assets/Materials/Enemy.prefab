@@ -131,8 +131,8 @@ MonoBehaviour:
   direction: 0
   deathNoise: {fileID: 8300000, guid: c6bbfc43c474b4f9dba88b387664261a, type: 3}
   _audioSource: {fileID: -2101440581393421493}
-  leftWayPoint: {fileID: 0}
-  rightWayPoint: {fileID: 0}
+  leftWayPoint: {fileID: 3417973061332892065, guid: fdec3223de4af47ebab8ee581d0c192d, type: 3}
+  rightWayPoint: {fileID: 6098007353225557085, guid: 0ebb5893882104eee8fe031c9f099fb3, type: 3}
   healthBar: {fileID: -6611433626422804754, guid: aa3e71a28dfae4d4ba09ef4cecd5ff09, type: 3}
 --- !u!82 &-2101440581393421493
 AudioSource:

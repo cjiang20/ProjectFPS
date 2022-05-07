@@ -21,10 +21,13 @@ public class Turn : MonoBehaviour
     public bool grounded;
     public Vector3 jump;
 
-    public GameObject target;
+    private GameObject target;
     public static Turn Reference;
-    public int KilledEnemies;
-
+    private int KilledEnemies;
+    public Clock clock;
+    public Gun gun;
+    public Score score;
+    private int totalEnemies;
     Rigidbody rb;
 
     Vector3 stepVector;
@@ -48,7 +51,7 @@ public class Turn : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
-
+        KilledEnemies = 0;
     }
 
     void onCollisionStay() {
@@ -115,9 +118,20 @@ public class Turn : MonoBehaviour
         {
             ReloadLevel();
         }
-        if(KilledEnemies == 4)
+        if(KilledEnemies == totalEnemies)
         {
-            NextLevel();
+            float time = clock.tm();
+            float damage = gun.dmg();
+            float accuracy = gun.accuracy();
+            (int hs,int score) s = score.getScore(time, accuracy, damage);
+            if (s.hs == 1) {
+                PlayerPrefs.SetInt("highscoreBool", 1);
+            }
+            else {
+                PlayerPrefs.SetInt("highscoreBool", 0);
+            }
+            PlayerPrefs.SetInt("currScore", s.score);
+            ScoreScreen();
         }
     }
     //Fixed update called once every physics step 
@@ -132,21 +146,27 @@ public class Turn : MonoBehaviour
             grounded = true;
         }
     }
+    public void setTotalEnemies(int total) {
+        totalEnemies = total;
+    }
+    public void Kill(){
+        KilledEnemies += 1;
+        Debug.Log(KilledEnemies);
+        Debug.Log(totalEnemies);
+    }
+    void Awake()
+    {
+        Reference = this;
+    }
     void ReloadLevel()
     {
         KilledEnemies = 0;
-        Debug.Log(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    void NextLevel()
+    void ScoreScreen()
     {
-        if(!SceneManager.GetActiveScene().name.Equals("Level 2"))
-        {
-            Debug.Log("Next Level");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        } else {
-            Debug.Log("Game Over You Win");
-            KilledEnemies--;
-        }
+        PlayerPrefs.SetString("currScene", SceneManager.GetActiveScene().name);
+        PlayerPrefs.SetInt("currSceneInt", SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Score");
     }
 }
