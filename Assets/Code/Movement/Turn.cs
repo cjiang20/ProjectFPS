@@ -74,14 +74,6 @@ public class Turn : MonoBehaviour
         }
 
         // Translates when using left click, forwards
-        if(Input.GetKey("z")) {
-            transform.Translate(Vector3.forward * 5 * Time.deltaTime, Space.Self);
-        }
-
-        // Translates when using right click, backwards
-        else if(Input.GetKey("c")) {
-            transform.Translate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
-        }
 
         if(playerInput.actions["Jump"].triggered){
 
