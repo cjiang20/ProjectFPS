@@ -154,10 +154,6 @@ public class Turn : MonoBehaviour
         Debug.Log(KilledEnemies);
         Debug.Log(totalEnemies);
     }
-    void Awake()
-    {
-        Reference = this;
-    }
     void ReloadLevel()
     {
         KilledEnemies = 0;
