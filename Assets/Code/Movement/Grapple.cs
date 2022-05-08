@@ -27,9 +27,7 @@ public class Grapple : MonoBehaviour
     {
         if(Input.GetKeyDown("q")) {
             if(!attached) {
-                GrappleHook();
-                oneTime = false;
-                
+                GrappleHook();  
             }
             else {
                 EndGrapple();
@@ -72,6 +70,7 @@ public class Grapple : MonoBehaviour
     void GrappleHook() {
         RaycastHit hit;
         if (Physics.Raycast(viewPoint.transform.position, viewPoint.transform.forward, out hit)) {
+            oneTime = false;
             tetherPoint = hit.point;
             attached = true;
             length = Vector3.Distance(tetherPoint, transform.position);
