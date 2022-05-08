@@ -25,7 +25,7 @@ public class ScoreMenu : MonoBehaviour
         highScoreText.text = "HIGHSCORE: " + PlayerPrefs.GetInt(sceneName);
    }
    public void Continue() {
-     SceneManager.LoadScene(PlayerPrefs.GetInt("currSceneInt") + 1);
+     SceneManager.LoadScene((PlayerPrefs.GetInt("currSceneInt") + 1)%5);
    }
    public void levelSelect(){
         SceneManager.LoadScene("LevelSelect");
