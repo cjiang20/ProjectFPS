@@ -5,12 +5,12 @@ public class Target : MonoBehaviour
     public float health = 1f, moveSpeed = 2f, direction;
     [SerializeField] private AudioClip deathNoise;
     public AudioSource _audioSource;
-    public Transform leftWayPoint, rightWayPoint;
     [SerializeField] private HealthBar healthBar;
     private float MaxHealth;
     private GameObject hp;
     bool movingRight = true;
     Rigidbody rb;
+    public int leftWayPoint = 0, rightWayPoint = 0;
 
     void Start()
     {
@@ -21,11 +21,11 @@ public class Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x > rightWayPoint.position.x)
+        if(transform.position.x > rightWayPoint)
         {
             movingRight = false;
         }
-        if(transform.position.x < leftWayPoint.position.x)
+        if(transform.position.x < leftWayPoint)
         {
             movingRight = true;
         }
