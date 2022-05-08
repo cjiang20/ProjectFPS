@@ -84,7 +84,7 @@ public class Turn : MonoBehaviour
 
         
         XRotation = 0;
-        YRotation = target.transform.eulerAngles.y + (speed * Time.deltaTime * Input.GetAxis("Mouse X"));
+        YRotation = target.transform.eulerAngles.y + (1000 * Time.deltaTime * Input.GetAxis("Mouse X") * PlayerPrefs.GetFloat("Sensitivity"));
         ZRotation = 0;
 
         // Quaternion values, as suggested by the assignment page.
