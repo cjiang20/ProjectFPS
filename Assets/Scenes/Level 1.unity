@@ -1773,7 +1773,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh157268
+  m_Name: pb_Mesh169024
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8425,8 +8425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 300
-  jumpF: 10
-  grounded: 0
+  jumpF: 5
+  grounded: 1
   jump: {x: 0, y: 0, z: 0}
   clock: {fileID: 1633119308}
   gun: {fileID: 838901978}
@@ -8831,7 +8831,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh157074
+  m_Name: pb_Mesh168830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11194,7 +11194,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh157212
+  m_Name: pb_Mesh168968
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
